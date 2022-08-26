@@ -6,7 +6,15 @@
 	<style>
 		body {margin: 0px;}
 		#triangular-mesh {float: left;}
-		#manual {position: absolute; top: 0px; bottom: 0px;}
+		#manual {position: absolute;top: 0px;bottom: 0px;width: 50vw;}
+		#manual > p {display: block;padding: 13px;background: white;font-family: sans-serif;/* border-radius: 6px; */margin: 0px;}
+		.bold {
+			font-weight: bold;
+		}
+		.title {
+			font-weight: bold;
+			font-size: 2em;
+		}
 	</style>
 </head>
 
@@ -15,15 +23,16 @@
 		<div id="triangular-mesh"></div>
 		<!-- <button id="make-fullscreen" onclick="triangular_mesh_sketch.make_fullscreen();">Fullscreen</button>
 		<button id="make-a4" onclick="triangular_mesh_sketch.make_a4();">Make A4</button> -->
-		<div id="manual">Яша и Мия!<br>
-			Поздравляем со свадьбой!<br>
-			Мы дарим вам генеративный геральдический узор.<br>
-			Кликните на него и он перейдёт в полноэкранный режим и оживёт. <br>
-			Ок каждый раз разный <br>
-			Сейчас он сгенерирован для печати на A4. Его можно сохранить, нажав на картинку правой кнопкой и выбрав «Save image as...». <br>
-			Полноэкранную картинку тоже можно так сохранить и, например, ставить фоном на рабочий стол.<br>
-			<br>
-			Дима и Дара
+		<div id="manual">
+			<p class="title">Яша и Мия!</p>
+			<p>Поздравляем со свадьбой!</p>
+			<p class="bold">Мы дарим вам генеративный геральдический узор.</p>
+			<p>Кликните на него и он перейдёт в полноэкранный режим и оживёт. </p>
+			<p class="bold">Он каждый раз разный </p>
+			<p>Сейчас он сгенерирован для печати на A4. Его можно сохранить, нажав на картинку правой кнопкой и выбрав «Save image as...». </p>
+			<p>Полноэкранную картинку тоже можно так сохранить и, например, ставить фоном на рабочий стол.</p>
+			
+			<p>Дима и Дара</p>
 
 		</div>
 	</main>
