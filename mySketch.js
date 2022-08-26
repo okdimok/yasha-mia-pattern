@@ -5,8 +5,8 @@ let triangular_mesh_yasha_mia = function ( sketch ) {
     let s = sketch;
     let utils = new okdimokPrimitives(sketch);
     // var [size_x, size_y] = [3840, 2160];
-	var dpi = 100;
-	// var dpi = 600;
+	// var dpi = 100;
+	var dpi = 600;
     var [size_x, size_y] = utils.getPaperSizeInPixes("a4", dpi);
     // var [size_x, size_y] = [500, 500];
 
@@ -63,6 +63,7 @@ let triangular_mesh_yasha_mia = function ( sketch ) {
 	this.drawPatternOnAGrid = function () {
 		var dotLine;
 		odd = true; 
+		let gap = size_x / n_triangles_per_side;
 	
 		for (var y = 0; y < lines.length - 1; y++) {
 			odd = !odd;
@@ -94,7 +95,7 @@ let triangular_mesh_yasha_mia = function ( sketch ) {
 					s.stroke(yashaMiaColor())
 					// s.strokeWeight(dpi/200)
 					s.noStroke()
-					s.circle(p.x, p.y, 0.05*dpi)
+					s.circle(p.x, p.y, 0.15*gap)
 				}
 			}
 		}
@@ -233,6 +234,7 @@ let triangular_mesh_yasha_mia = function ( sketch ) {
 		document.querySelector("body").style.overflow= "hidden";
 		// document.querySelector("#make-fullscreen").style.display= "none";
 		// document.querySelector("#make-a4").style.display= "block";
+		document.querySelector("#manual").style.display= "none";
 		[size_x, size_y] = [s.windowWidth, s.windowHeight];
 		s.resizeCanvas(size_x, size_y);
 		drawPatternOnce();
@@ -244,6 +246,7 @@ let triangular_mesh_yasha_mia = function ( sketch ) {
 		document.querySelector("body").style.overflowY= "scroll";
 		// document.querySelector("#make-a4").style.display= "none";
 		// document.querySelector("#make-fullscreen").style.display= "block";
+		document.querySelector("#manual").style.display= "block";
 		[size_x, size_y] = utils.getPaperSizeInPixes("a4", dpi);
 		s.resizeCanvas(size_x, size_y);
 		drawPatternOnce();
